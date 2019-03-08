@@ -1,0 +1,33 @@
+Evoting : 
+ Super User ( admin puding ) 
+  - crud pageant  (v)
+  - crud option detail (v)
+  - crud option voucher (v)
+  - crud admin pageant
+  - view penjualan per pageant (v)
+  - view detail pageant (v)
+  - view detail peserta
+  - crud form eregister
+  - view data register
+  - ubah password
+
+ super admin
+  - update profil
+  - crud admin vote dan admin eregister
+  - crud voucher
+  - generate voucher
+  - view data peserta eregister
+  - view detail peserta yg bakalan divote
+  - ubah password
+  - view penjualan
+
+ admin vote
+  - ubah password
+  - crud peserta
+  - view penjualan
+  - view voucher
+
+ admin eregister
+  -ubah password
+  - crud peserta register
+  - crud pemilihan peserta ke vote

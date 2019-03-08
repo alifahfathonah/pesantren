@@ -1,0 +1,214 @@
+.file-upload {
+	background-color: #ffffff;
+	margin: 0 auto;
+	padding: 20px;
+	height: 530px;
+}
+
+.file-upload-btn {
+	width: 100%;
+	margin: 0;
+	color: #fff;
+	background: #1FB264;
+	border: none;
+	padding: 10px;
+	border-radius: 4px;
+	border-bottom: 4px solid #15824B;
+	transition: all .2s ease;
+	outline: none;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.file-upload-btn:hover {
+	background: #1AA059;
+	color: #ffffff;
+	transition: all .2s ease;
+	cursor: pointer;
+}
+
+.file-upload-btn:active {
+	border: 0;
+	transition: all .2s ease;
+}
+
+.file-upload-content {
+	display: none;
+	text-align: center;
+}
+
+.file-upload-input {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	outline: none;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.image-upload-wrap {
+	margin-top: 10px;
+	border: 4px dashed #1FB264;
+	position: relative;
+	margin-bottom: 50px;
+	height:400px;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+	background-color: #1FB264;
+	border: 4px dashed #ffffff;
+}
+
+.image-title-wrap {
+	padding: 0 15px 15px 15px;
+	color: #222;
+}
+
+.drag-text {
+	text-align: center;
+	bottom: 0;
+}
+
+.drag-text h3 {
+	text-transform: uppercase;
+	color: #15824B;
+	padding-top: 300px;
+	font-size:20px;
+}
+
+.file-upload-image {
+	max-height: 200px;
+	max-width: 200px;
+	margin: auto;
+	padding: -50px;
+	padding: 20px;
+}
+
+.remove-image {
+	width: 200px;
+	margin: 0;
+	color: #fff;
+	background: #cd4535;
+	border: none;
+	padding: 10px;
+	border-radius: 4px;
+	border-bottom: 4px solid #b02818;
+	transition: all .2s ease;
+	outline: none;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.remove-image:hover {
+	background: #c13b2a;
+	color: #ffffff;
+	transition: all .2s ease;
+	cursor: pointer;
+}
+
+.remove-image:active {
+	border: 0;
+	transition: all .2s ease;
+}
+
+.padbtn{
+	margin-top: -130px;
+}
+.boxhead{
+	background: rgba(112,235,131,1);
+	background: -moz-linear-gradient(left, rgba(112,235,131,1) 0%, rgba(39,179,230,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(112,235,131,1)), color-stop(100%, rgba(39,179,230,1)));
+	background: -webkit-linear-gradient(left, rgba(112,235,131,1) 0%, rgba(39,179,230,1) 100%);
+	background: -o-linear-gradient(left, rgba(112,235,131,1) 0%, rgba(39,179,230,1) 100%);
+	background: -ms-linear-gradient(left, rgba(112,235,131,1) 0%, rgba(39,179,230,1) 100%);
+	background: linear-gradient(to right, rgba(112,235,131,1) 0%, rgba(39,179,230,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#70eb83', endColorstr='#27b3e6', GradientType=1 );
+	height:80px;
+	padding-top:50px;
+}
+.boxhead2{
+	background: rgba(141,112,235,1);
+	background: -moz-linear-gradient(left, rgba(141,112,235,1) 0%, rgba(39,131,230,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(141,112,235,1)), color-stop(100%, rgba(39,131,230,1)));
+	background: -webkit-linear-gradient(left, rgba(141,112,235,1) 0%, rgba(39,131,230,1) 100%);
+	background: -o-linear-gradient(left, rgba(141,112,235,1) 0%, rgba(39,131,230,1) 100%);
+	background: -ms-linear-gradient(left, rgba(141,112,235,1) 0%, rgba(39,131,230,1) 100%);
+	background: linear-gradient(to right, rgba(141,112,235,1) 0%, rgba(39,131,230,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8d70eb', endColorstr='#2783e6', GradientType=1 );
+	height:80px;
+	padding-top:50px;
+}
+.boxttle{
+	margin-top: -20px;
+	text-align: center;
+	color:white;
+}
+
+
+
+.file-upload-contentss {
+	display: none;
+	text-align: center;
+}
+
+.file-upload-inputss {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	outline: none;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.image-upload-wrapss {
+	margin-top: 10px;
+	border: 4px dashed #1FB264;
+	position: relative;
+	margin-bottom: 50px;
+	height:400px;
+}
+
+.image-droppingss,
+.image-upload-wrapss:hover {
+	background-color: #1FB264;
+	border: 4px dashed #ffffff;
+}
+
+.file-upload-imagess {
+	max-height: 200px;
+	max-width: 200px;
+	margin: auto;
+	padding: 20px;
+}
+
+.remove-imagess {
+	width: 200px;
+	margin: 0;
+	color: #fff;
+	background: #cd4535;
+	border: none;
+	padding: 10px;
+	border-radius: 4px;
+	border-bottom: 4px solid #b02818;
+	transition: all .2s ease;
+	outline: none;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.remove-imagess:hover {
+	background: #c13b2a;
+	color: #ffffff;
+	transition: all .2s ease;
+	cursor: pointer;
+}
+
+.remove-imagess:active {
+	border: 0;
+	transition: all .2s ease;
+}
