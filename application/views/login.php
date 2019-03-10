@@ -1,94 +1,62 @@
 <!DOCTYPE html>
-<!-- 
-Template Name: inspinia - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.4
-Version: 3.3.0
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: http://themeforest.net/item/inspinia-responsive-admin-dashboard-template/4021469?ref=keenthemes
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
+
 <html lang="en">
-<!--<![endif]-->
-<!-- BEGIN HEAD -->
 
 <head>
-    <meta charset="utf-8" />
-    <title>
-        <?= $title . ' | ' . $global_title ?>
-    </title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta content="" name="description" />
-    <meta content="" name="author" />
-    <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
-    <link href="<?= base_url('assets/inspinia') ?>/static_full_version/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="<?= base_url('assets/inspinia') ?>/static_full_version/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="<?= base_url('assets/inspinia') ?>/static_full_version/css/animate.css" rel="stylesheet" type="text/css" />
-    <link href="<?= base_url('assets/inspinia') ?>/static_full_version/css/style.css" rel="stylesheet" type="text/css" />
-    <!-- END THEME STYLES -->
+
+  <title>Pondok Pesantren Al-Bahjah</title>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="<?= base_url() ?>/assets/img/logo.png"/>
+  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/css/util.css">
+
+  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/css/main.css">
 </head>
-<!-- END HEAD -->
-<!-- BEGIN BODY -->
 
-
-<body class="gray-bg">
-
-    <div class="middle-box text-center loginscreen animated fadeInDown">
-        <div>
-            <div>
-
-                <h1 class="logo-name">LPD</h1>
-
-            </div>
-            <h3>Selamat Datang</h3>
-            <p>LPD Al Bahjah Cirebon
-            </p>
-            <p>Silahkan Login</p>
-            <form class="m-t" role="form" action="index.html">
-                <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Username" required="">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Password" required="">
-                </div>
-                <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
-<!-- 
-                <a href="#"><small>Forgot password?</small></a> -->
-                <p class="text-muted text-center"><small>Daftar Sekarang!</small></p>
-                <a class="btn btn-sm btn-white btn-block" href="register.html">Daftar</a>
-            </form>
-            <p class="m-t"> <small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small> </p>
+<body>
+  <div class="limiter">
+    <div class="container-login100">
+      <div class="wrap-login100">
+        <div class="login100-form-title" style="background-image: url(<?= base_url() ?>/assets/img/h.png);">
+          <span class="login100-form-title-1">
+            Pondok Pesantren Al-bahja<br> <h4 style="font-size:16px">Sistem Informasi Pendaftaran Santri</h4>
+          </span>
         </div>
+        <form class="login100-form validate-form" role="form" method="post" action="">
+                <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+            <span class="label-input100">Username</span>
+            <input class="input100" type="text" name="username" placeholder="Enter username">
+            <span class="focus-input100"></span>
+          </div>
+          <div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+            <span class="label-input100">Password</span>
+            <input class="input100" type="password" name="password" placeholder="Enter password">
+            <span class="focus-input100"></span>
+          </div>
+          <div class="flex-sb-m w-full p-b-30">
+            <div>
+                Belum Mempunyai akun? <b>
+              <a href="<?= base_url('register') ?>" class="txt1">
+                  Daftar Disini
+              </a>
+            </div>
+          </div>
+         <div class="container-login100-form-btn">
+            <input type="submit" class="login100-form-btn" value="Log In" name="login">
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
+  
+  <script src="<?= base_url() ?>/assets/js/jquery-3.2.1.min.js"></script>
+  <script src="<?= base_url() ?>/assets/js/bootstrap.min.js"></script>
+  <script src="<?= base_url() ?>/assets/js/main.js"></script>
 
-    <!-- END LOGIN -->
-    <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
-    <!-- BEGIN CORE PLUGINS -->
-    <!--[if lt IE 9]>
-<script src="<?= base_url('assets/inspinia') ?>/assets/global/plugins/respond.min.js"></script>
-<script src="<?= base_url('assets/inspinia') ?>/assets/global/plugins/excanvas.min.js"></script> 
-<![endif]-->
-    <script src="<?= base_url('assets/inspinia') ?>/Static_full_version/js/jquery-3.1.1.min.js" type="text/javascript"></script>
-    <script src="<?= base_url('assets/inspinia') ?>/Static_full_version/js/bootstrap.min.js" type="text/javascript"></script>
-
-    <script>
-        jQuery(document).ready(function() {
-            inspinia.init(); // init inspinia core components
-            Layout.init(); // init current layout
-            Login.init();
-            Demo.init();
-        });
-    </script>
-    <!-- END JAVASCRIPTS -->
 </body>
-<!-- END BODY -->
-
 </html>

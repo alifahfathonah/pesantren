@@ -1,74 +1,85 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>INSPINIA | Register</title>
-
-    <link href="<?= base_url('assets/inspinia') ?>/static_full_version/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="<?= base_url('assets/inspinia') ?>/static_full_version/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="<?= base_url('assets/inspinia') ?>/static_full_version/css/plugins/iCheck/custom.css" rel="stylesheet" type="text/css" />
-    <link href="<?= base_url('assets/inspinia') ?>/static_full_version/css/animate.css" rel="stylesheet" type="text/css" />
-    <link href="<?= base_url('assets/inspinia') ?>/static_full_version/css/style.css" rel="stylesheet" type="text/css" />
-
-
-</head>
-
-<body class="gray-bg">
-
-    <div class="middle-box text-center loginscreen   animated fadeInDown">
-        <div>
-            <div>
-
-                <h1 class="logo-name">LDP</h1>
-
-            </div>
-            <h3>Pendaftaran</h3>
-            <p>Calon Santri Al Bahjah</p>
-            <div class="form-horizontal m-t-md">
-            <?=form_open_multipart('pendaftaran')?>
-            <div class="form-group">
-                                    <label class="col-sm-2 col-sm-2 control-label">Nama</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" data-mask="999-99-999-9999-9" placeholder="">
-                                        <span class="help-block">999-99-999-9999-9</span>
-                                    </div>
-                                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email" required="">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Password" required="">
-                </div>
-                <div class="form-group">
-                        <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Agree the terms and policy </label></div>
-                </div>
-                <button type="submit" class="btn btn-primary block full-width m-b">Register</button>
-
-                <p class="text-muted text-center"><small>Already have an account?</small></p>
-                <a class="btn btn-sm btn-white btn-block" href="login.html">Login</a>
-            </form>
-            <p class="m-t"> <small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small> </p>
-        </div>
-</div>
-    </div>
-
-    <!-- Mainly scripts -->
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- iCheck -->
-    <script src="js/plugins/iCheck/icheck.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.i-checks').iCheck({
-                checkboxClass: 'icheckbox_square-green',
-                radioClass: 'iradio_square-green',
-            });
-        });
-    </script>
-</body>
-
+<html lang="en">
+	<head>
+		<title>SINORA | Login</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/png" href="<?= base_url() ?>/assets/img/logo.png"/>
+		<link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/css/util.css">
+		<link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/css/main.css">
+	</head>
+	<body>
+		<div class="limiter">
+			<div class="container-login100">
+				<div class="wrap-login100">
+					<div class="login100-form-title" style="background-image: url(<?= base_url() ?>/assets/img/h.png);">
+						<span class="login100-form-title-1">
+							Pondok Pesantren Al-bahja<br> <h4 style="font-size:16px">Sistem Informasi Pendaftaran Santri</h4>
+						</span>
+					</div>
+    				<?= $this->session->flashdata('msg') ?>
+					<?= form_open('register', ['class' => 'login100-form validate-form' , 'role' => 'form']); ?>
+						<div class="wrap-input100 validate-input m-b-26" data-validate="nama is required">
+							<span class="label-input100">Nama Lengkap</span>
+							<input class="input100" type="text" name="nama" placeholder="Masukan Nama lengkap">
+							<span class="focus-input100"></span>
+						</div>
+						<div class="wrap-input100 validate-input m-b-26" data-validate="tempat lahir is required">
+							<span class="label-input100">Tempat Lahir</span>
+							<input class="input100" type="text" name="tempat_lahir" >
+							<span class="focus-input100"></span>
+						</div>
+						<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+							<span class="label-input100">Tanggal Lahir</span>
+							<input class="input100" type="date" name="tanggal_lahir" >
+							<span class="focus-input100"></span>
+						</div>
+						<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+							<span class="label-input100">Jenis Kelamin</span>
+							<select name="jenis_kelamin" class="input100">
+								<option value="L">Laki - Laki</option>
+								<option value="P">Perempuan</option>
+							</select>
+							<span class="focus-input100"></span>
+						</div>
+						<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+							<span class="label-input100">Kontak</span>
+							<input class="input100" type="text" name="kontak" >
+							<span class="focus-input100"></span>
+						</div>
+						<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+							<span class="label-input100">Alamat</span>
+							<textarea class="input100" name="alamat" rows="4"></textarea>
+							<span class="focus-input100"></span>
+						</div>
+						<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+							<span class="label-input100">Username</span>
+							<input class="input100" type="text" name="username" >
+							<span class="focus-input100"></span>
+						</div>
+						<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+							<span class="label-input100">Password</span>
+							<input class="input100" type="password" name="password" >
+							<span class="focus-input100"></span>
+						</div>
+						<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+							<span class="label-input100">Ulangi Password</span>
+							<input class="input100" type="password" name="repassword" >
+							<span class="focus-input100"></span>
+						</div>
+						<div class="container-login100-form-btn">
+							<input type="submit" class="login100-form-btn" value="Daftar" name="register">
+						</div>
+					<?= form_close(); ?>
+				</div>
+			</div>
+		</div>
+		
+		<script src="<?= base_url() ?>/assets/js/jquery-3.2.1.min.js"></script>
+		<script src="<?= base_url() ?>/assets/js/bootstrap.min.js"></script>
+		<script src="<?= base_url() ?>/assets/js/main.js"></script>
+	</body>
 </html>

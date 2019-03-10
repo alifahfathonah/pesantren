@@ -1,50 +1,49 @@
-<?php 
+<?php
 
 class Register extends MY_Controller
 {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->library('gz');
-        $this->load->library('ci_jwt');
+		$this->load->model('Pengguna_m');
+		$this->load->model('Calon_santri_m');
 	}
 
 	public function index()
 	{
-		if ($this->POST('login'))
-        {   
-            if ($this->POST('password') != $this->POST('rpassword')) {
-                $this->flashmsg("Password yanga anda masukan tidak sama");
-                redirect('login');
-                exit;
-            }
-            $this->data = [
-                'name'          => $this->POST('nama'),
-                'address'       => $this->POST('alamat'),
-                'phone_number'  => $this->POST('kontak'),
-                'email'     => $this->POST('email'),
-                'username'  => $this->POST('email'),
-                'password'  => $this->POST('password'),
-                'role_id'   => $this->POST('username'),
-            ];
-
-            $response = json_decode($this->gz->POST('auth', $this->data));
-            if ($response->status === 'success')
-            {
-                $this->session->set_userdata(['token' => $response->data->token]);
-                if (isset($response->data->staff_token))
-                {
-                    $this->session->set_userdata(['staff_token' => $response->data->staff_token]);
-                }
-                $this->flashmsg($response->message);
-                redirect('login');
-            }
-
-            $this->flashmsg($response->message, 'danger');
-        }
-
-        $this->data['title']			= 'Login';
-        $this->data['global_title']		= $this->title;
-        $this->load->view('login', $this->data);
+		if ($this->POST('register')) {
+			if ($this->POST('password') != $this->POST('repassword')) {
+				$this->flashmsg('Password anda tidak sama','warning');
+				redirect('register');
+				exit;
+			}
+			if ($this->Pengguna_m->get_row(['username'=> $this->POST('username')])) {
+				$this->flashmsg('Username anda sudah digunakan','warning');
+				redirect('register');
+				exit;
+			}
+			$this->data['login'] = [
+				'username' => $this->POST('username'),
+				'nama'		=> $this->POST('nama'),
+				'tempat_lahir'	=> $this->POST('tempat_lahir'),
+				'tanggal_lahir'	=> $this->POST('tanggal_lahir'),
+				'jenis_kelamin'	=> $this->POST('jenis_kelamin'),
+				'alamat'	=> $this->POST('alamat'),
+				'kontak'	=> $this->POST('kontak'),
+				'password'	=> md5($this->POST('password')),
+				'role'	=> '3',
+			];
+			$this->data['user'] = [
+				'id_pengguna'	=> $this->db->insert_id(),
+				// 'nama'		=> $this->POST('nama'),
+			];
+			$this->Pengguna_m->insert($this->data['login']);
+			$this->Calon_santri_m->insert($this->data['user']);
+			$this->flashmsg('Silahkan Login Menggunakan Username Password anda dan Lengkapi data diri anda','success');
+			redirect('register');
+			exit;
+		}
+		$this->data['title'] = 'Register' . $this->title;
+		$this->load->view('register', $this->data);
 	}
 }
