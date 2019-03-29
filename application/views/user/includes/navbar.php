@@ -25,15 +25,16 @@
                     <a href="#"><i class="fa fa-users"></i> <span class="nav-label">Data Master</span> <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li>
-                            <a href="<?= base_url('admin/data-calon')?>"><i class="fa fa-th-large"></i> <span class="nav-label">Data Pendaftaran</span></a>
+                            <a href="<?= base_url('user/pendaftaran')?>"><i class="fa fa-th-large"></i> <span class="nav-label">Data Pendaftaran</span></a>
                         </li>
                         <li>
-                            <a href="<?= base_url('admin/periode')?>"><i class="fa fa-edit"></i> <span class="nav-label">Data Periode Pendaftaran</span></a>
-                        </li>
-                        <li>
-                            <a href="<?= base_url('admin/informasi')?>"><i class="fa fa-user"></i> <span class="nav-label">Data Informasi</span></a>
+                            <a href="<?= base_url('user/data-jurusan')?>"><i class="fa fa-user"></i> <span class="nav-label">Data Jurusan</span></a>
                         </li>
                     </ul>
+                </li>
+
+                <li>
+                    <a href="<?= base_url('') ?>/user/informasi"><i class="fa fa-th-large"></i> <span class="nav-label">Informasi</span></a>
                 </li>
             </ul>
 

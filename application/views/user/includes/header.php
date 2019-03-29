@@ -27,7 +27,7 @@
     <!-- Sweet alert -->
     <script src="<?= base_url() ?>/assets/js/plugins/sweetalert/sweetalert.min.js"></script>
     <script src="<?= base_url() ?>/assets/js/plugins/chartJs/Chart.min.js"></script>
-    <!-- <script src="<?= base_url() ?>/assets/js/demo/chartjs-demo.js"></script> -->
+    <script src="<?= base_url() ?>/assets/js/demo/chartjs-demo.js"></script>
 </head>
 
 <body class="">

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>SINORA | Login</title>
+		<title>Pondok Pesantren Al-Bahjah</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" type="image/png" href="<?= base_url() ?>/assets/img/logo.png"/>
+		<!-- <link rel="icon" type="image/png" href="<?= base_url() ?>/assets/img/logo.png"/> -->
 		<link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
