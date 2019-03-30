@@ -17,7 +17,7 @@ class Admin extends MY_Controller
 	public function index($value='')
 	{
 		$this->data['title'] = 'Dashboard';
-		$this->data['content'] = 'home';
+		$this->data['content'] = 'data_daftarulang';
 		$this->template($this->data, $this->module);
 	}
 

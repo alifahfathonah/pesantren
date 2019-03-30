@@ -12,8 +12,8 @@ class Login extends MY_Controller
 		$this->data['username'] = $this->session->userdata('username');
 		if (isset($this->data['username']))
 		{
-			$this->data['kode'] = $this->session->userdata('kode');
-			switch ($this->data['kode'])
+			$this->data['id_pengguna'] = $this->session->userdata('id_pengguna');
+			switch ($this->data['id_pengguna'])
 			{
 				case 1:
 					redirect('admin');
