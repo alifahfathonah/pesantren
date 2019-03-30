@@ -48,8 +48,8 @@ class Login extends MY_Controller
             // echo json_encode($this->data);exit;
 			$result = $this->login_m->login($this->data['username'], $this->data['password']);
 
-			$this->dump($result);
-			exit;
+			// $this->dump($result);
+			// exit;
 			if (!isset($result)) 
 			{
 				$this->flashmsg('username atau password salah','danger');
