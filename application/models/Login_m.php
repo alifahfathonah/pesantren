@@ -19,6 +19,7 @@ class Login_m extends MY_Model
 				'username'		  => $user->username,
 				'nama'	          => $user->nama,
 				'role'         => $user->id_role,
+				'id_pengguna'	=> $user->id_pengguna
 			]);
 		}
 

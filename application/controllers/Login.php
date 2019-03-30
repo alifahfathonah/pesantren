@@ -15,12 +15,15 @@ class Login extends MY_Controller
 			$this->data['kode'] = $this->session->userdata('kode');
 			switch ($this->data['kode'])
 			{
-				case 'ADMIN':
+				case 1:
 					redirect('admin');
 					break;
-				default :
-				    redirect('user');
-				    break;
+				case 4:
+					redirect('user');
+					break;
+				// default :
+				//     redirect('user');
+				//     break;
 			}
 			exit;
 		}
