@@ -45,7 +45,7 @@
                                     <td><?= $value->tempat_lahir ?> , <?= $value->tanggal_lahir ?></td>
                                     <td><?= ($value->jenis_kelamin === 'L') ? 'Laki Laki' : 'Perempuan' ?></td>
                                     <td class="center"><?= $this->Periode_m->get_row(['id_periode' => $value->id_periode])->nama ?></td>
-                                    <td class="center"><a href="<?= base_url('admin/detail_calon/' . $value->id_calon) ?>" class="btn btn-succes">Detail</a></td>
+                                    <td class="center"><a href="<?= base_url('admin/detail_calon/' . $value->id_calon) ?>" class="btn btn-success">Detail</a></td>
                                 </tr>
                                     
                                 <?php endforeach ?>

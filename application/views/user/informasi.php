@@ -22,7 +22,7 @@
             <?php foreach ($data as $value): ?>
             <div class="ibox">
                 <div class="ibox-content">
-                    <a href="article.html" class="btn-link">
+                    <a href="<?= base_url('user/detail_informasi/' . $value->id_informasi) ?>" class="btn-link">
                         <h2>
                         <?= $value->judul ?>
                         </h2>

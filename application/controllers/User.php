@@ -15,9 +15,12 @@
 
 		public function index($value='')
 		{
-			$this->data['title'] = 'Dashboard';
-			$this->data['content'] = 'index';
-			$this->template($this->data, $this->module);
+			$this->load->library('tanggal');
+			$this->load->model('Informasi_m');
+			$this->data['data']	= $this->Informasi_m->get();
+			$this->data['title'] = 'informasi';
+			$this->data['content']= 'informasi';
+			$this->template($this->data,$this->module);
 		}
 
 		public function pendaftaran($value='')
@@ -101,6 +104,20 @@
 			$this->data['content']= 'informasi';
 			$this->template($this->data,$this->module);
 		}
+
+		public function detail_informasi($value='')
+		{
+			$this->load->library('tanggal');
+			$this->load->model('Informasi_m');
+			$id= $this->uri->segment(3);
+			$this->check_allowance(!isset($id));
+			$this->data['data']	= $this->Informasi_m->get_row(['id_informasi' => $id]);
+			$this->data['title'] = 'informasi';
+			$this->data['content']= 'detail_informasi';
+			$this->template($this->data,$this->module);
+		}
+
+
 
 		public function hasil_ujian($value='')
 		{

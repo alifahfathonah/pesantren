@@ -1,9 +1,9 @@
 <div class="footer">
                 <div class="pull-right">
-                    <strong>Universitas Sriwijaya</strong>
+                    <strong>Pondok Pesantren AL-Bahjah</strong>
                 </div>
                 <div>
-                    <strong>Copyright</strong> Unsri &copy; 2018
+                    <strong>Copyright</strong> &copy; 2018
                 </div>
             </div>
 

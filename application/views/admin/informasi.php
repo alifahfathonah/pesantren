@@ -39,7 +39,7 @@
                                 <tr>
                                     <th>Judul</th>
                                     <th>Isi</th>
-                                    <th>Aksi</th>
+                                    <th width="25%">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -49,9 +49,9 @@
                                     <td><p><?= $value->isi ?></p></td>
                                     <td>
                                         <div class="btn-group">
-                                            <a href="#" class="btn btn-primary">Edit</a>
-                                            <a href="#" class="btn btn-success">Detail</a>
-                                            <a href="#" class="btn btn-danger">Hapus</a>
+                                            <a href="<?= base_url('admin/edit_informasi/' . $value->id_informasi) ?>" class="btn btn-primary">Edit</a>
+                                            <!-- <a href="#" class="btn btn-success">Detail</a> -->
+                                            <a href="<?= base_url('admin/informasi?aksi=hapus&id=' . $value->id_informasi) ?>" class="btn btn-danger">Hapus</a>
                                         </div>
                                     </td>
                                 </tr>   
