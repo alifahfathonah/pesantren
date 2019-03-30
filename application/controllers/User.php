@@ -10,7 +10,17 @@
 		{
 			parent::__construct();
 		    $this->module = 'user';
-		    $this->data['id_pengguna'] = 1;
+		    $this->data['username'] = $this->session->userdata('username');
+		    $this->data['id_pengguna'] = $this->session->userdata('id_pengguna');
+		    $this->data['role'] = $this->session->userdata('role');
+		    $this->data['nama'] = $this->session->userdata('nama');
+
+			if (!isset($this->data['username'] , $this->data['role']) && $this->data['role'] != 4)
+			{
+				redirect('login');
+				exit;
+			}
+		    $this->load->model('Periode_m');
 		}
 
 		public function index($value='')
